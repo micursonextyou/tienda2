@@ -1,0 +1,88 @@
+.fila-cabecera {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .contedor-principal {
+      background: #ffffff;
+      justify-self: center;
+      align-items: center;
+      padding: 2rem;
+      height: 35rem;
+      margin-top: -1rem;
+  }
+  
+  .leyendas {
+      border-bottom: rgba(156, 156, 156, 0.3) 1px solid;
+  }
+  
+  .leyendas .centrar {
+      padding-top: 0.75rem;
+  }
+  
+  .leyendas span {
+      padding: 3rem 0 .46rem 0.4rem;
+  }
+  
+  .contenedor-articulos {
+      margin-top: 1.5rem;
+      height: 18rem;
+  }
+  
+  .contenedor-articulos .fila {
+      border-bottom: rgba(156, 156, 156, 0.3) 1px solid;
+      width: 100%;
+      padding: 1rem;
+      margin: 0;
+  }
+  
+  .contenedor-articulos .fila:last-child {
+      border-bottom: none;
+  }
+  
+  .fila {
+      height: 5rem;
+  }
+  
+  P {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .contenedor-articulos .row .col {
+      justify-items: right;
+      text-align: center;
+  }
+  
+  .cant {
+      padding-top: 0!important;
+      text-align: center;
+  }
+  
+  .cant .inp {
+      margin-left: 3rem;
+  }
+  
+  input[type="number"] {
+      height: 1.6rem;
+  }
+  
+  .fila-calculo {
+      height: 0.8rem;
+      margin: 0.2rem;
+  }
+  
+  .fila-calculo span {
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: 600;
+  }
+  
+  .valor {
+      color: green;
+  }
+  
+  button {
+      margin: 1rem;
+      width: 100%;
+  }

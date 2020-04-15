@@ -1,0 +1,84 @@
+.dialog-seguridad {
+    width: 100%;
+    height: 70%;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.titulo-row {
+    background: orange;
+    border-radius: 5px;
+    margin-top: -3rem;
+    height: 4rem;
+}
+
+.form-row {
+    margin-top: 3rem;
+}
+
+h5 {
+    margin-bottom: 2.5rem;
+}
+
+input {
+    height: 2rem!important;
+}
+
+.button-row {
+    padding-top: 1rem;
+}
+
+button {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    border: 1px solid #D9D9D9!important;
+    background-color: #ffffff!important;
+    box-sizing: border-box;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+input[type="text"]:focus {
+    border-color: #42a5f5!important;
+    box-shadow: 0 0 5px 0 #42a5f5!important;
+}
+
+input[type="email"]:focus {
+    border-color: #42a5f5!important;
+    box-shadow: 0 0 5px 0 #42a5f5!important;
+}
+
+input[type="password"]:focus {
+    border-color: #42a5f5!important;
+    box-shadow: 0 0 5px 0 #42a5f5!important;
+}
+
+input[type="date"]:focus {
+    border-color: #42a5f5!important;
+    box-shadow: 0 0 5px 0 #42a5f5!important;
+}
+
+input[type="text"]::placeholder {
+    color: gray;
+}
+
+input[type="email"]::placeholder {
+    color: gray;
+}
+
+input[type="password"]::placeholder {
+    color: gray;
+}
+
+input[type="date"]::placeholder {
+    color: gray;
+}

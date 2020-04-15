@@ -1,0 +1,36 @@
+.dialog-mis-productos {
+      width: 40rem;
+      height: 26.5rem;
+      padding: 2rem;
+      background-color: #ffffff;
+  }
+  
+  .titulo-row {
+      margin-top: -3rem;
+  }
+  
+  .titulo-row .col {
+      background: orange;
+  }
+  
+  input {
+      height: 2rem;
+  }
+  
+  .button-row {
+      border-top: gainsboro 1px solid;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+  }
+  
+  button {
+      width: 100%;
+  }
+  
+  select {
+      display: block;
+  }
+  
+  form {
+      margin-top: 2rem;
+  }

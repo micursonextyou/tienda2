@@ -1,0 +1,117 @@
+.asaide-nav {
+      background: white;
+      margin-top: -2.8rem;
+      min-height: 35rem;
+  }
+  
+  i {
+      font-weight: 500;
+      font-size: 1.7rem;
+      color: red;
+      margin-left: 1rem;
+      margin-right: 0.7rem;
+  }
+  
+  .i2 {
+      font-size: 0.9rem;
+      float: right;
+      margin-right: 1rem!important;
+      margin-top: 0.5rem!important;
+  }
+  
+  i {
+      vertical-align: middle;
+  }
+  
+  .marco-imagen {
+      height: 10.5rem;
+      width: 100%;
+      position: relative;
+  }
+  
+  .marco-imagen img {
+      width: 100%;
+  }
+  
+  .img-cuenta img {
+      border-radius: 50%;
+  }
+  
+  .img-cuenta {
+      z-index: 2;
+      margin-top: -40%;
+      margin-left: 1rem;
+      position: absolute;
+      padding: 0.3rem;
+      height: 4rem;
+      text-align: center;
+  }
+  
+  .img-cuenta .row .col {
+      justify-self: left;
+  }
+  
+  h6 {
+      margin-left: -2rem;
+  }
+  
+  ul.acorh,
+  ul.acorh * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+  }
+  
+  ul.acorh {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 3rem;
+  }
+  
+  ul.acorh li {
+      list-style: none;
+      min-height: 2.5rem;
+      padding-left: 1rem;
+  }
+  
+  ul.acorh li a {
+      color: blue;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  }
+  
+  ul.acorh li ul {
+      max-height: 0;
+      padding-left: 1rem;
+      margin-top: 0.7rem;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+  }
+  
+  ul.acorh li ul li {
+      min-height: 2.5rem;
+  }
+  
+  ul.acorh li li a {
+      color: blue;
+      font-size: 1rem;
+      border: 0;
+  }
+  
+  ul.acorc li li:last-child a {
+      border-bottom: 0;
+  }
+  
+  ul.acorh li:hover ul {
+      max-height: 300px;
+      transition: .2s all ease-in;
+  }
+  
+  li.item:hover {
+      border-bottom: red 1px solid;
+  }

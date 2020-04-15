@@ -1,0 +1,59 @@
+ /* You can add global styles to this file, and also import other style files */
+ @import "../node_modules/materialize-css/dist/css/materialize.min.css";
+ @import "../node_modules/ngx-toastr/toastr.css"   ;
+ @import "./../../iconos/carritoYotros/style.css";
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+ html,
+ body {
+     height: 100%;
+     margin: 0;
+ }
+ 
+ html,
+ body {
+     height: 100%;
+ }
+ 
+ body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+ 
+ html,
+ body {
+     height: 100%;
+ }
+ 
+ body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+ 
+ html,
+ body {
+     height: 100%;
+ }
+ 
+ body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+ 
+ html,
+ body {
+     height: 100%;
+ }
+ 
+ body {
+     margin: 0;
+     font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+ 
+ .mat-dialog-container {
+     background: transparent;
+     border: none;
+     box-shadow: none;
+     overflow: inherit!important;
+     border-radius: 20px;
+ }
