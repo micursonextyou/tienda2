@@ -1,3 +1,67 @@
-<p>
-  login works!
-</p>
+<div class="contenedor-principal">
+  <div class="condedor-login z-depth-5">
+      <div class="row">
+          <div class="col l12">
+
+              <div class="row form-row">
+
+                  <form [formGroup]="frmLogin" (ngSubmit)="signInWithEmailAndPass(frmLogin)" class="col l12">
+                      <div class="row">
+                          <div class="col l8 push-l2 titulo-col">
+                              <h5>Ingresar Session</h5>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col l10 push-l1">
+                              <h6>Redes Sociales.</h6>
+                              <div class="row">
+                                  <div class="col l12">
+                                      <button class="rsf btn waves-effect waves-light blue darken-4" name="action">
+                                      <i class="icon-facebook"></i> Ingresar con Facebook
+                                    </button>
+                                  </div>
+                              </div>
+                              <div class="row rsg-row">
+                                  <div class="col l12">
+                                      <button class="rsg btn waves-effect waves-light red darken-4">
+                                      <i class="icon-google-plus"></i> Ingresar con Google
+                                    </button>
+
+                                  </div>
+                              </div>
+
+                          </div>
+
+
+                      </div>
+                      <div class="divider"> </div>
+                      <div class="row">
+
+                          <div class="col l10 push-l1">
+                              <h6>Iniciar con correo</h6>
+                              <input type="email" formControlName="email" placeholder="Email" name="" id="">
+                          </div>
+                          <div class="col l10 push-l1">
+                              <input type="password" formArrayName="pass" placeholder="Clave" name="" id="">
+                          </div>
+                      </div>
+                      <div class="row  button-row">
+                          <div class="col l10 push-l1">
+                              <button class="bi btn waves-effect waves-light darken-4 red" type="
+                              submit" name="action">
+                               Ingresar
+                            </button>
+                          </div>
+                      </div>
+                      <div class="row  leyenda-row">
+                          <div class="col l10 push-l1">
+                              <p> No tiene cuenta? <a routerLink="/registro">Ingrese aqui.</a></p>
+                          </div>
+                      </div>
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

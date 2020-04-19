@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
+import { DialogMiTiendaComponent } from '../dialog-mi-tienda/dialog-mi-tienda.component';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog-mi-seguridad',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogMiSeguridadComponent implements OnInit {
 
-  constructor() { }
+  firstFormGroup: FormGroup;
+	constructor(
+		public dialogRef: MatDialogRef<DialogMiTiendaComponent>,
+		@Inject(MAT_DIALOG_DATA) public data: 'ggggggggggggggg',
+    private _formBuilder: FormBuilder) {}
+    onNoClick(): void {
+      this.dialogRef.close();
+    }
+
 
   ngOnInit() {
   }
 
+  
+
 }
+

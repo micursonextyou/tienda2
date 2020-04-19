@@ -1,3 +1,205 @@
-<p>
-  registro-Usuario works!
-</p>
+<div class="contenedor-registro">
+  <div class="contenedor-gen z-depth-5">
+      <div class="row titulo-row z-depth-3">
+          <div class="col l12">
+              <h5>Datos de Usuario</h5>
+          </div>
+      </div>
+
+      <div class="row form-row">
+          <div class="col l12 form-col">
+              <div class="row">
+                  <form class="col l12">
+                      <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                          <mat-step [stepControl]="firstFormGroup">
+                              <form [formGroup]="firstFormGroup">
+                                  <ng-template matStepLabel>Cuenta</ng-template>
+                                  <div class="row row1">
+                                      <div class="col l3 marco-img-col  ">
+                                          <div class="row">
+                                              <div class="col l12">
+
+                                                  <div class="marco-img z-depth-3">
+                                                      <img matTooltip="Subir imagen de Perfil de usuario" class="img" src="../../../../../assets/images/default-avatar.png" alt="">
+                                                      <input id="inpfile" (change)='foto($event)' formControlName="images" type="file" class="file">
+                                                  </div>
+                                                  <span>Foto de perfil</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="col l9 datos1-col">
+                                          <div class="row">
+                                              <div class="col l10">
+                                                  <input class="inptext" formControlName="email" type="email" placeholder="Email">
+                                                  <div class="row row-error" *ngIf="email.invalid && (email.dirty||email.touched)">
+                                                      <div class="col l12 col-error">
+                                                          <span>{{email.errors.ValidadorEmail.message}}</span>
+                                                      </div>
+                                                  </div>
+
+
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col l10">
+                                                  <input class="inptext" formControlName="pass" required type="password" placeholder="clave" class="">
+                                                  <div class="row row-error" *ngIf="pass.invalid&&(pass.dirty||pass.touched)">
+                                                      <div class="col l12 col-error">
+                                                          <span>{{pass.errors.ValidadorPassword.message}}</span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row ">
+                                              <div class="col l10">
+                                                  <input class="inptext" formControlName="cfpass" required type="password" placeholder="repetir clave" class="">
+                                                  <div class="row row-error" *ngIf="cfpass.invalid&&(cfpass.dirty||cfpass.touched)">
+                                                      <div class="col l12 col-error">
+                                                          <span>{{cfpass.errors.ValidadorCFPassword.message}}</span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="row button-row0">
+                                      <div class="col l3 push-l9">
+                                          <button class="waves-effect waves-light btn red" [disabled]='firstFormGroup.invalid' type=button matStepperNext>Siguente </button>
+                                      </div>
+                                  </div>
+                              </form>
+                          </mat-step>
+                          <mat-step [stepControl]="secondFormGroup">
+                              <form [formGroup]="secondFormGroup">
+                                  <ng-template matStepLabel>Datos Usuario</ng-template>
+                                  <div class="row2">
+                                      <div class="row">
+                                          <div class="col l6">
+                                              <input class="inptext" formControlName="nombre" type="text" placeholder="Nombre" class="">
+                                              <div class="row row-error" *ngIf="nombre.invalid&&(nombre.dirty||nombre.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="nombre.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col l6">
+                                              <input class="inptext" formControlName="apellido" type="text" placeholder="Apellido" class="">
+                                              <div class="row row-error" *ngIf="apellido.invalid&&(apellido.dirty||apellido.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="apellido.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col l4">
+                                              <input class="inptext" formControlName="dni" type="text" placeholder="Dni/Cedula" class="">
+                                              <div class="row row-error" *ngIf="dni.invalid&&(dni.dirty||dni.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="dni.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col l4">
+                                              <input class="inptext" formControlName="telefono" type="text" placeholder="Telefono" class="">
+                                              <div class="row row-error" *ngIf="telefono.invalid&&(telefono.dirty||telefono.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="telefono.errors.required ">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col l4">
+                                              <input class="inptext" formControlName="f_nacimiento" type="text" onfocus="(this.type='date')" placeholder="Fecha nacimiento" class="">
+                                              <div class="row row-error" *ngIf="f_nacimiento.invalid&&(f_nacimiento.dirty||f_nacimiento.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="f_nacimiento.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col l12">
+                                              <input type="text" formControlName="direccion" placeholder="Direccion" class="">
+                                              <div class="row row-error" *ngIf="direccion.invalid&&(direccion.dirty||direccion.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="direccion.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col l4">
+                                              <input type="text" formControlName="ciudad" placeholder="ciudad" class="">
+                                              <div class="row row-error" *ngIf="ciudad.invalid&&(ciudad.dirty||ciudad.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="ciudad.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col l4">
+                                              <input type="text" formControlName="provincia" placeholder="Provincia" class="">
+                                              <div class="row row-error" *ngIf="provincia.invalid&&(provincia.dirty||provincia.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="provincia.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col l4">
+                                              <input type="text" formControlName="pais" placeholder="Pais" class="">
+                                              <div class="row row-error" *ngIf="pais.invalid&&(pais.dirty||pais.touched)">
+                                                  <div class="col l12 col-error">
+                                                      <span *ngIf="pais.errors.required">Dato olbigatorio</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                      <div class="row button-row">
+
+                                          <div class="col l3">
+                                              <button class="waves-effect waves-light btn red sss" type=button matStepperPrevious>Atras</button>
+                                          </div>
+                                          <div class="col l3 push-l6">
+                                              <button class="waves-effect waves-light btn red sss" [disabled]='secondFormGroup.invalid' type=button matStepperNext>Siguente</button>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </mat-step>
+                          <mat-step [stepControl]="TFormGroup">
+                              <form [formGroup]="TFormGroup">
+                                  <ng-template matStepLabel>Sociales</ng-template>
+                                  <div class="row3">
+                                      <div class="row">
+                                          <div class="col l6">
+                                              <input type="text" formControlName="facebook" placeholder="Facebook" class="">
+                                          </div>
+                                          <div class="col l6">
+                                              <input type="text" formControlName="instagram" placeholder="Instagram" class="">
+                                          </div>
+                                      </div>
+
+                                      <div class="row button-row2">
+
+                                          <div class="col l3">
+                                              <button class="waves-effect waves-light btn red sss" type=button matStepperPrevious>Atras</button>
+                                          </div>
+                                          <div class="col l4 push-l5 ">
+                                              <button class="waves-effect waves-light btn red sss" [disabled]='TFormGroup.invalid' (click)="GuardarUsuario()" type="submit"> Guardar</button>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                              </form>
+                          </mat-step>
+                      </mat-horizontal-stepper>
+                  </form>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+</div>
